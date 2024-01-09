@@ -1,0 +1,12 @@
+{
+    "files.exclude": {
+        "**/*.dll": true, //不显示dll文件
+        "**/*.meta": true,
+        "build/": true, //不显示build文件夹以及文件夹下的文件
+        "Library/": true,
+        "**/*.bat": true,
+        "tsconfig.json": true,
+        "**/*.map": true,
+    },
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+}

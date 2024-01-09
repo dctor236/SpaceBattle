@@ -1,0 +1,72 @@
+import { ConfigBase, IElementBase } from "./ConfigBase";
+const EXCELDATA:Array<Array<any>> = [["id","description","icon","music","skyType","weatherEffect","num1","num2","num3","num4","num5","num6","num7","num8","num9","num10","num11","num12","num13","num14","num15","num16","num17","num18","num19","num20","num21","num22","num23","num24","num25"],["","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],[1,"风和日丽，就跟学校一样","177821",75,1,null,1.5,"#FFFFFF","#5B6CC4","#7C90CA","#9FA4FF",5.5,"#FFFFFF",1.5,"#E8E8FF",180,-40,5,"#FFFAEE",4800,6,40,"#FFE2B6",0,0,"#FFFFFF",1,0.6,0.6,0,0],[2,"举头望明月，低头思故乡","175862",76,2,null,1,"#FFFFFF","#0A002C","#191938","#000836",15,"#FFFDDA",1.5,"#AEAA99",35,-25,4,"#FFF0E5",8000,0,0,"#FFFFFF",11,2,"#FFFDDA",0.1,1,0.5,0.5,9],[3,"淅淅沥沥的雨，就像我沉重的心情","175859",77,1,[23],3,"#717171","#C9C9C9","#869197","#A7ABAD",5,"#797C7D",2,"#FFFFFF",180,-40,5,"#BABABA",5000,0,0,"#FFC44E",0,0,"#FFFFFF",1,1,0.8,0,0],[4,"夕阳无限好，只是近黄昏","175861",78,1,null,1.5,"#FFFAE4","#B1BDC4","#CAAF9A","#B98E66",3,"#FFF4E8",1.5,"#FFF0D5",80,-20,5,"#FFE8D7",4500,10,60,"#FF8A27",0,0,"#FFFFFF",1,1,0.6,0,0],[5,"炎炎夏日，晴空万里","175863",75,1,null,1.5,"#FFFFFF","#5B6CC4","#7C90CA","#9FA4FF",5.5,"#FFFFFF",1.5,"#E8E8FF",180,-40,5,"#FFFAEE",4800,6,40,"#FFE2B6",0,0,"#FFFFFF",1,0.6,0.6,0,0],[6,"凝望夜空，那里有属于我的星星吗？","175860",80,2,[23],1,"#FFFFFF","#0E0030","#220030","#16001B",1.7,"#FFFFFF",1.5,"#FFFFFF",2,-15,4,"#FFFFFF",5200,0,0,"#FFFFFF",25,8,"#F698FF",0,0,0,0.7,9]];
+export interface ISkyChangeElement extends IElementBase{
+ 	/**唯一ID*/
+	id:number
+	/**描述*/
+	description:string
+	/**图片*/
+	icon:string
+	/**Music表ID*/
+	music:number
+	/**1=白天*/
+	skyType:number
+	/**2=黑夜*/
+	weatherEffect:Array<number>
+	/**天气特效(特效表ID)*/
+	num1:number
+	/**天空球亮度变化*/
+	num2:string
+	/**天空球整体颜色*/
+	num3:string
+	/**天空球顶层颜色*/
+	num4:string
+	/**天空球上层颜色*/
+	num5:string
+	/**天空球下层颜色*/
+	num6:number
+	/**地平线渐出*/
+	num7:string
+	/**云颜色变化*/
+	num8:number
+	/**光强度变化*/
+	num9:string
+	/**光颜色变化*/
+	num10:number
+	/**朝向角度变化*/
+	num11:number
+	/**俯仰角度变化*/
+	num12:number
+	/**光照强度变化*/
+	num13:string
+	/**光照颜色变化*/
+	num14:number
+	/**色温变化*/
+	num15:number
+	/**太阳大小变化*/
+	num16:number
+	/**太阳光强度变化*/
+	num17:string
+	/**太阳颜色变化*/
+	num18:number
+	/**月亮大小变化*/
+	num19:number
+	/**月亮光强度变化*/
+	num20:string
+	/**月亮颜色变化*/
+	num21:number
+	/**云透明度*/
+	num22:number
+	/**云密度*/
+	num23:number
+	/**云速度*/
+	num24:number
+	/**星星亮度*/
+	num25:number
+ } 
+export class SkyChangeConfig extends ConfigBase<ISkyChangeElement>{
+	constructor(){
+		super(EXCELDATA);
+	}
+
+}

@@ -1,0 +1,10 @@
+idea/
+DBCache/
+Pictures/
+TsBuilder.log
+build.ts
+*.xlsx#
+*.zip
+tsconfig.json
+/.mw
+*.ini

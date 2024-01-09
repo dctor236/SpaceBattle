@@ -1,0 +1,88 @@
+ ${Import}
+
+ @UIBind('${UIPath}')
+ export default class ${ClassName}_Generate extends ${SuperClassName} {
+     ${Fileds}
+     protected onAwake() {
+         this.canUpdate = false;
+         this.layer = mw.UILayerMiddle;
+         this.initButtons();
+         //this.initLanguage()
+     }
+     
+     protected initButtons() {
+         //按钮添加点击${StaleButton_Start}
+         this.${StaleButton}.onClicked.add(()=>{
+             Event.dispatchToLocal("PlayButtonClick", "${StaleButton}");
+         })
+         this.${StaleButton}.onPressed.add(() => {
+             Event.dispatchToLocal("PlayButtonPressed", "${StaleButton}");
+         })
+         this.${StaleButton}.onReleased.add(() => {
+             Event.dispatchToLocal("PlayButtonReleased", "${StaleButton}");
+         })
+         this.${StaleButton}.touchMethod = mw.ButtonTouchMethod.PreciseTap;${StaleButton_End}
+         //按钮添加点击${Button_Start}
+         this.${Button}.onClicked.add(()=>{
+             Event.dispatchToLocal("PlayButtonClick", "${Button}");
+         })
+         this.${Button}.onPressed.add(() => {
+             Event.dispatchToLocal("PlayButtonPressed", "${Button}");
+         })
+         this.${Button}.onReleased.add(() => {
+             Event.dispatchToLocal("PlayButtonReleased", "${Button}");
+         })
+         this.${Button}.touchMethod = mw.ButtonTouchMethod.PreciseTap;${Button_End}
+         // 初始化多语言
+         this.initLanguage()
+ 
+     }
+     
+     protected initLanguage(){
+         //按钮多语言${StaleButton_Start}
+         this.setLanguage(this.${StaleButton});${StaleButton_End}${StaleButton_HideStart}
+         this.setLanguage(this.uiWidgetBase.findChildByPath("${StaleButton_Path}") as mw.StaleButton);${StaleButton_HideEnd}
+         //文本多语言${TextBlock_Start}
+         this.setLanguage(this.${TextBlock})${TextBlock_End}${TextBlock_HideStart}
+         this.setLanguage(this.uiWidgetBase.findChildByPath("${TextBlock_Path}") as mw.TextBlock);${TextBlock_HideEnd}
+ 
+     }
+     
+     private setLanguage(ui: mw.StaleButton | mw.TextBlock) {
+         let call = mw.UIScript.getBehavior("lan");
+         if (call && ui) {
+             call(ui);
+         }
+     }
+     
+     /**
+       * 设置显示时触发
+       */
+     public show(...params: unknown[]) {
+         mw.UIService.showUI(this, this.layer, ...params)
+     }
+ 
+     /**
+      * 设置不显示时触发
+      */
+     public hide() {
+         mw.UIService.hideUI(this)
+     }
+ 
+     protected onStart(): void{};
+     protected onShow(...params: any[]): void {};
+     protected onHide():void{};
+ 
+     protected onUpdate(dt: number): void {
+ 
+     }
+     /**
+      * 设置ui的父节点
+      * @param parent 父节点
+      */
+     setParent(parent: mw.Canvas){
+         parent.addChild(this.uiObject)
+         this.uiObject.size = this.uiObject.size.set(this.rootCanvas.size)
+     }
+ }
+ 

@@ -1,0 +1,34 @@
+﻿{
+	"name": "123",
+	"packageName": "DF3B36AA4E925B0AE615A19C39219619",
+	"version": "",
+	"intro": "123",
+	"notes": "123",
+	"editorVersion": "v0.25.0.4",
+	"parentGameIdentity": "",
+	"parentGameId": "",
+	"extra": "{\"attribute\":2,\"IsHorizontal\":true,\"useAvatar\":1}",
+	"devEnv": 4,
+	"needToMgs": 1,
+	"attribute": 2,
+	"autoSubmitAudit": false,
+	"classification": [],
+	"ignore": [
+		"game.desc",
+		"Asset_Data_List"
+	],
+	"files": [
+		{
+			"type": "Game_Thumbnail",
+			"path": "Pictures/Game_Thumbnail.jpg"
+		},
+		{
+			"type": "GameSetting",
+			"path": "Config/GameSetting.ini"
+		},
+		{
+			"type": "Asset_Data_List",
+			"path": "Asset_Data_List"
+		}
+	]
+}

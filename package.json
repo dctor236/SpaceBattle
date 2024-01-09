@@ -1,0 +1,19 @@
+{
+  "name": "mollywoodschool",
+  "version": "1.0.0",
+  "description": "魔莱坞学院 - 许悦，王冠",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.appshahe.com/metaApp/metagame/metabluets/games/mollywoodschool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "module_cameracg": "^5.0.2",
+    "module_gm": "^5.0.2"
+  }
+}

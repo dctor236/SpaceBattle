@@ -1,0 +1,26 @@
+import { ConfigBase, IElementBase } from "./ConfigBase";
+const EXCELDATA:Array<Array<any>> = [["ID","ModelGuid","SourceType","ModelPoint","ModelLocation","ModelLarge","ModelRotate","Notice"],["","","","","","","",""],[1,"21285",0,15,new mw.Vector(0,0,0),new mw.Vector(1,1,1),new mw.Vector(0,0,0),"左手手持法杖"],[2,"23547",0,15,new mw.Vector(0,0,0),new mw.Vector(1,1,1),new mw.Vector(0,0,0),"左手手持篮球"],[3,"27087",0,20,new mw.Vector(-1,0,-12),new mw.Vector(1,1,1),new mw.Vector(0,0,0),"皇冠"],[4,"27083",0,16,new mw.Vector(0,0,-25),new mw.Vector(1,1,1),new mw.Vector(0,0,0),"右手毛笔"],[5,"27083",0,16,new mw.Vector(0,0,-15),new mw.Vector(0.1,0.1,0.1),new mw.Vector(0,0,0),"右手拿海盗旗"],[6,"27107",0,16,new mw.Vector(0,0,0),new mw.Vector(1,1,1),new mw.Vector(90,0,0),"右手拿铅笔"],[7,"27108",0,16,new mw.Vector(0,0,0),new mw.Vector(1,1,1),new mw.Vector(90,0,0),"右手拿圆珠笔"],[8,"54808",0,1,new mw.Vector(0,-4,4),new mw.Vector(0.8,1,1),new mw.Vector(0,0,0),"女性眼镜"],[9,"54814",0,1,new mw.Vector(0,-4,4.5),new mw.Vector(0.8,1,1),new mw.Vector(0,0,0),"男性眼镜"],[10,"54824",0,1,new mw.Vector(0,10,0),new mw.Vector(0.5,0.5,0.5),new mw.Vector(0,0,0),"胡子"],[11,"54836",0,1,new mw.Vector(0,-4,4),new mw.Vector(0.8,1,1),new mw.Vector(0,0,0),"太阳镜1"],[12,"54838",0,1,new mw.Vector(0,-4,4),new mw.Vector(0.8,1,1),new mw.Vector(0,0,0),"太阳镜2"],[13,"32606",0,12,new mw.Vector(3,-2,-20),new mw.Vector(0.8,0.8,0.8),new mw.Vector(-90,0,90),"背部装饰狗1"],[14,"32612",0,12,new mw.Vector(3,-2,-20),new mw.Vector(0.8,0.8,0.8),new mw.Vector(-90,0,90),"背部装饰狗2"],[15,"32608",0,0,new mw.Vector(0,0,22),new mw.Vector(1,1,1),new mw.Vector(0,0,0),"头顶鼠鼠"],[16,"68390",0,1,new mw.Vector(0,0,4),new mw.Vector(0.8,1,0.8),new mw.Vector(0,0,0),"彩色眼镜"],[17,"68410",0,0,new mw.Vector(0,5,6),new mw.Vector(0.6,0.8,0.8),new mw.Vector(0,0,0),"兔耳朵"],[18,"68449",0,0,new mw.Vector(0,0,3),new mw.Vector(0.9,1,1),new mw.Vector(0,0,0),"章鱼帽"],[19,"68447",0,0,new mw.Vector(0,0,3),new mw.Vector(1.1,1.,1.1),new mw.Vector(0,0,0),"鲨鱼帽"],[20,"68462",0,0,new mw.Vector(0,0,5),new mw.Vector(1,1,1),new mw.Vector(0,0,0),"独角兽帽子"],[21,"92037",0,0,new mw.Vector(0,0,-5),new mw.Vector(1.2,1.2,1.2),new mw.Vector(0,0,0),"波比头"],[22,"92715",0,0,new mw.Vector(0,0,22),new mw.Vector(1,1,1),new mw.Vector(0,0,0),"头顶鸭子"],[23,"110948",0,1,new mw.Vector(0,0,-4),new mw.Vector(0.6,0.6,0.6),new mw.Vector(0,0,0),"南瓜头"],[24,"32618",0,0,new mw.Vector(0,0,22),new mw.Vector(0.5,0.5,0.5),new mw.Vector(0,0,0),"头顶猫猫1"],[25,"32622",0,0,new mw.Vector(0,0,22),new mw.Vector(0.5,0.5,0.5),new mw.Vector(0,0,0),"头顶猫猫2"],[26,"32624",0,0,new mw.Vector(0,0,22),new mw.Vector(0.5,0.5,0.5),new mw.Vector(0,0,0),"头顶猫猫3"],[27,"32626",0,0,new mw.Vector(0,0,22),new mw.Vector(0.8,0.8,0.8),new mw.Vector(0,0,0),"头顶猫猫4"],[28,"87017",0,23,new mw.Vector(0,0,2),new mw.Vector(1,1,0.6),new mw.Vector(0,0,0),"滑板"],[29,"2C8132F8",1,15,new mw.Vector(-33,29,-120),new mw.Vector(1.2,1.2,1.85),new mw.Vector(-14,-18,5),"飞天扫把"],[30,"A14237C74387C7105D8ADDB50B96E437",2,23,new mw.Vector(0,0,0),new mw.Vector(1,1,1),new mw.Vector(0,0,-90),"摩托车"],[31,"26788",0,23,new mw.Vector(0,0,-11),new mw.Vector(0.8,0.8,0.8),new mw.Vector(0,0,-90),"平衡车"],[32,"F7B6CBE24EA127A831BDDCA466D03754",0,23,new mw.Vector(0,0,0),new mw.Vector(1,1,1),new mw.Vector(0,0,-90),"单人飞机"],[33,"68447",0,23,new mw.Vector(20,5,-50),new mw.Vector(5,5,5),new mw.Vector(0,0,-90),"鲨鲨"],[34,"152523",0,23,new mw.Vector(0,0,-78),new mw.Vector(0.1,0.1,0.1),new mw.Vector(0,0,-90),"外星飞船"],[35,"117845",0,23,new mw.Vector(2,0,-5),new mw.Vector(0.9,0.9,0.9),new mw.Vector(0,10,90),"暮光之城"],[36,"174935",0,23,new mw.Vector(0,0,-122),new mw.Vector(10,10,10),new mw.Vector(0,0,0),"清凉怡夏"],[37,"71019",0,23,new mw.Vector(0,0,-20),new mw.Vector(10,10,10),new mw.Vector(0,0,-90),"飞天之书"],[38,"112935",0,23,new mw.Vector(0,0,-5),new mw.Vector(1.25,1.25,1.25),new mw.Vector(0,0,90),"冲浪板（白）"],[39,"112946",0,23,new mw.Vector(15,0,-3),new mw.Vector(1.25,1.25,1.25),new mw.Vector(0,0,270),"冲浪板（黑）"],[40,"112946",0,23,new mw.Vector(15,0,-3),new mw.Vector(0.01,0.01,0.01),new mw.Vector(0,0,0),"水上步行球"],[41,"191858",0,0,new mw.Vector(1,0,10),new mw.Vector(1.1,1.,1.1),new mw.Vector(-33,-15,-85),"新手魔法师的帽子"],[42,"192741",0,0,new mw.Vector(1,0,10),new mw.Vector(1.1,1.,1.1),new mw.Vector(-1,-36,-146),"初阶魔法师的帽子"],[43,"192740",0,0,new mw.Vector(1,0,10),new mw.Vector(1.1,1.,1.1),new mw.Vector(-1,-36,-146),"中阶魔法师的帽子"],[44,"192738",0,0,new mw.Vector(1,0,10),new mw.Vector(1.1,1.,1.1),new mw.Vector(-1,-36,-146),"高阶魔法师的帽子"],[45,"192739",0,0,new mw.Vector(1,0,10),new mw.Vector(1.1,1.,1.1),new mw.Vector(-1,-36,-146),"大魔法师的帽子"],[46,"002B22E84BFA7055E2A366AC245C3E99",0,23,new mw.Vector(0,0,-39.96),new mw.Vector(2.43,2.43,2.3),new mw.Vector(0,0,0),"纸飞机"],[47,"1A79F3F943D8B31066EB71AAC47DB070",0,23,new mw.Vector(62.1,0,-9.82),new mw.Vector(0.20,0.20,0.20),new mw.Vector(0,0,0),"战斗机"],[49,"10CA277A493CF0648559A490157E2160",0,23,new mw.Vector(0,0,-22.59),new mw.Vector(0.60,0.60,0.60),new mw.Vector(0,0,0),"糖果机"]];
+export interface IModelElement extends IElementBase{
+ 	/**唯一ID*/
+	ID:number
+	/**模型id*/
+	ModelGuid:string
+	/**模型来源*/
+	SourceType:number
+	/**模型挂点*/
+	ModelPoint:number
+	/**模型偏移*/
+	ModelLocation:mw.Vector
+	/**模型缩放*/
+	ModelLarge:mw.Vector
+	/**模型旋转*/
+	ModelRotate:mw.Vector
+	/**备注*/
+	Notice:string
+ } 
+export class ModelConfig extends ConfigBase<IModelElement>{
+	constructor(){
+		super(EXCELDATA);
+	}
+
+}
